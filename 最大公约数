@@ -1,0 +1,36 @@
+-->用两个数a,b中的较大数a模较小数b，若等于0，则较小数b为两数的最大公约数
+若不等于0，则较小数b依次减一
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a = 0; 
+	int b = 0;
+	scanf("%d%d", &a, &b);
+	while (a!= b)
+	{
+		if (a > b)
+			a = a - b;
+		if (a < b)
+			b = b - a;
+}
+		printf("%d\n", a);
+		system("pause");
+		return 0;
+	}
+  -->用辗转相除法
+  int main()
+  {
+  int a = 0;
+  int b = 0;
+  int c = 0;
+  printf("请输入两个数：");
+  scanf("%d%d", &a, &b);
+  while(c = a%b)
+  {		
+  a = b;	
+  b = c;
+  }	
+  printf("最大公约数为：%d\n", b);
+  return 0;
+  }
