@@ -1,0 +1,63 @@
+-->求n^k
+1.an=k*an-1
+2.a1=k
+-->阶乘
+1.an=n*an-1
+2.a1=1
+-->1972
+1.n%10+an-1=an
+2.a0=0
+-->尾递归
+再次循环开辟空间
+-->编写一个函数实现n^k，使用递归实现 
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+#include<stdlib.h>
+int CiFang(int i, int j)
+
+{
+
+	if (j == 1)
+
+	{
+
+		return i;
+
+	}
+
+	return i * CiFang(i, j - 1);
+
+}
+int main()
+{
+	printf("%d\n", CiFang(2, 3));
+
+	putchar('\n');
+
+	system("pause");
+
+	return 0;
+
+}
+-->写一个递归函数DigitSum(n)，输入一个非负整数，返回组成它的数字之和， 
+例如，调用DigitSum(1729)，则应该返回1+7+2+9，它的和是19 
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+#include<stdlib.h>
+int DigitSum(int n)
+{
+	if (n == 0)
+	{
+		return 0;
+	}
+	return n % 10 + DigitSum(n / 10);
+}
+int main()
+{
+	printf("%d\n", DigitSum(1977));
+	putchar('\n');
+	system("pause");
+	return 0;
+}
