@@ -1,0 +1,19 @@
+-->普通闰年:能被4整除但不能被100整除的年份为普通闰年。（如2004年就是闰年，1900年不是闰年）
+
+-->实现一个函数判断year是不是闰年
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+#include<stdlib.h>
+int Leap_year(int year)
+{
+	return (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) ? 1 : 0;
+}
+int main()
+{   
+	int n;
+	scanf("%4d", &n);
+	printf("%d",Leap_year(n));
+	system(" pause");
+	return 0;
+}
