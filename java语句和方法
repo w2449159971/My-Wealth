@@ -1,0 +1,142 @@
+-->表达式
+   a=100
+   100>50?
+-->语句
+   以分号结束
+-->语句块
+   {
+     任意语句
+   }
+-->顺序结构
+-->分支结构
+   if(逻辑表达式 备注和c不同，一定是逻辑结果)
+   {
+   条件为真时执行
+   }else{
+   条件为假时执行
+   }
+   if（true）条件
+   规范：if后最好用大括号
+   if
+   c++：
+   d++；
+   switch(int 类型 |String类型|Enum类型 ){
+   case 条件1：
+   case 条件2：
+   若没有break则会一直进行
+-->循环语句
+   while(条件){
+   }
+   
+   for(初始化；条件；后续动作){
+   }
+   
+   do{
+   }while（条件)
+   
+   在java中多了一种for的形式  foreach
+   for(元素类型 变量名 容量数组){
+-->continue和break都支持一种带标签的形式
+-->方法
+   1.限定符   pubilc/static
+   2.**返回值类型，如果没有返回值，要明确写void
+   3.**方法命名，命名习惯 首个单词全小写，以后的单词首字母大写，多是动词
+   4.**参数列表
+   （）| （参数类型 参数名称）
+   5.异常声明 throws 异常列表
+   6.**方法体{}
+            pubilc static int calcSum(int[] arry) throws Exception{
+            ...
+     }
+    重点：关于方法签名
+      方法名称 + 参数列表
+   int sum(int a, int b){}   重定义    void sum (int a, int b){}    不是重定义
+ 
+   int sum(int a, int b, int c){}
+   方法名称相同，但参数列表不同
+   重载要和重写分开；
+   通常情况下 用不到重载  例外：在构造方法中非常常见
+实例代码
+void a() {}
+void b() {a();}
+void c() {b();}
+void main() {c();}
+//《盗梦空间》调用栈
+-->递归方法
+  在java中，递归方法没有任何特殊性
+  
+long sum(int n){
+  }
+  //sum 1.n==1   1
+        2.n>1    sum(n-1)+n;
+  if(n==1){return 1;}
+  else {return sum(n-1)+n}
+  }
+
+思想：
+   数学归纳法的思想
+      递推
+      终止    
+核心：不要在写递归时尝试展开递归过程 
+     局部性原则
+     //汉诺塔hannoi
+汉诺塔：
+0号柱子  1号柱子   2号柱子
+n==1  把盘子从 源柱子 移到目标柱子
+-->计算n的位数
+public static int calcDigitNum(long n){
+
+规则      内在模型
+          除以10的次数
+          在整个过程中是一个循环：（数变成0循环应该停下）
+          需要一个变量记录循环次数
+ int digitNum = 0;               int digitNum = 0;
+ while (n > 0){                      for( ; n > 0 ; n / 10) {
+ n = n / 10；                        digitNum++;
+ digitNum++;                        }
+ }
+-->求n的阶乘n!
+n!=1*2*3*4*5*...*n
+public static int factoria12(long)
+
+
+public static long factorial(int n)
+利用公式
+e = 1 + 1/1! + 1/2！+ 1/3！+ 1/4! + 1/5! ...
+计算自然对数底e
+public static double calcE(double precision){
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
