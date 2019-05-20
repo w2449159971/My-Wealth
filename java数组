@@ -1,0 +1,97 @@
+
+------数组（array）
+  1.语法
+      定义数组，初始化数组
+  2.内存模型
+      遇到第一个引用类型
+      
+-----数据类型       1.基本数据类型
+                2.引用数据类型
+                       a)数据类型
+                       b)对象类型
+                       c)接口类型
+                       
+-----数组初始化
+  1.静态初始化
+     int[] array = {1,2,3,4,5};                   不支持修改
+     int array = new int []{1,2,3,4,5}；   //给方法传参数  构造匿名数组
+     int array = new int [数组大小]；
+     
+    模型
+              a）引用类型的变量
+              b）解析空间不同
+  2.动态的方式
+    int[] array = new int[数据的长度]
+  3.不初始化数组，指定一个null字面量
+    int array[] = null  //null是空引用
+    
+-----数组下标访问，用中括号[]指定具体下标
+  1.下标的类型一定是int
+  2.下标的取值范围是，数组的长度是n个，则[0,n-1]
+     java.lang.IndexOutOfBoundsException   数组下标越界
+     
+-----数组本质上其实也是对象（Object类的派生类）
+  1.属性
+     int[] array=...;                      对象.属性  对象.方法（）
+     array.lenth  //数组元素的个数
+  2.方法
+  
+------数组本质上是引用类型，是对象和基本数据类型有很大区别
+    1.int a = 100；
+    右边的空间，究竟存在什么位置
+         a）内存
+         b）栈（stack）           堆（Heap）
+  void print(int a){
+    System.out.println(a);
+    }
+  void main(){
+    int a = 10;
+    print(a);
+    }
+print中的a是形参
+main 中的a是实参
+值传递改变形参，不会影响实参
+-----数组类型（引用类型）
+   void main(){
+      int[] array = {1,2,3,4,5}
+      printArray(array);
+   }
+   void printArray(int[] array){
+   ...
+   }
+   
+   
+   void main()
+      int[] array = {1,2,3,4,5};
+      method1();
+      method2();
+      //array背后的数组有多大？
+   }
+   void method1(int[] array){
+      array = new int[10];
+      //array变成1...10
+   }
+   void method2(int[] array){
+      array[2] = 200;
+   }
+java的数组的原生支持java.util.Array支持
+
+-----默认值的各个类型的表现
+byte/short/int/long                 0
+float/double                        0.0
+char                                0x0000
+boolean                            false
+ reference                         null
+
+ -----变量末初始化时默认给初值
+   局部变量无法享受默认值
+   参数没有默认值
+
+System.out.println              有换行
+System.out.print                无换行
+System.out.printf               传进去多个参数   用%n换行
+System.out.format               跟printf相同
+前面指定格式，后面跟参数          %s 小数点后保留四位
+
+-----元素类型也可以是数组 表现为多维数组
+
