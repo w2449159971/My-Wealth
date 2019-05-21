@@ -1,0 +1,83 @@
+--类的对象
+         1.语法    死记
+         2.内存模型 理解
+         3.面向对象的优点
+         4.如何设计一个类 
+                      a)设计模式  23种
+
+---面向对象三大特性
+         1.封装性
+         2.继承性
+         3.多态性
+
+---如何定义类
+[限定符]  class 类名称 [继承定义] [接口实现] {类体 class body}                类名称必须首字母大写 
+
+public class Wu extrnds BaseClass implements Interface{
+属性  
+方法
+内部类
+}
+
+public class ClassName{                类为了组织状态 + 行为
+fields                     属性
+methods               方法
+}
+//如何定义一个类
+class Person{
+             String name;
+             int age;
+//不给构造方法 默认给出一个构造方法
+}
+public class Wu{
+//之定义了一个引用变量，没有真正的创建对象
+Person personNull = null;
+//如何根据类创建对象
+Person person = new Person();
+//使用对象
+//对象，属性
+//对象，方法
+person.name = "中国人";
+person.age = 5000;
+person.print();
+}
+
+---如何定义属性
+        [限定符] 数据类型 属性名称；
+---构造方法
+          [限定符] 方法名称 （必须跟类名一样）（参数列表） [异常] {
+                  //构造化部分
+            }
+---构造方法经常用到重载技术
+      1.如果没有明确的给出构造方法，可以认为java编译默认给出一个public类名称（）{}
+      2.如果显示给出了构造方法，默认不会给出
+--如何根据类创建对象
+类名称 变量名
+变量名 = new 构造方法（实参列表）；
+构造方法跟别的方法一样除了
+        a）没有返回值
+        b）方法名和类名称一样
+
+--方法调用
+   person.print();   想成 print(person);
+
+--认识第一组限定符
+      public/private/什么都没有/protected
+
+      [限定符]class ClassName{}
+      public/什么都没有
+
+       public class Course0519{}          公开
+       class  Group{}                           包（package）内部
+       
+       class ClassName{
+       [限定符] 属性；  public/private/什么都没有
+       [限定符] 方法；
+}
+
+访问限定符     类内部      包内部      其他包的子类        不是一个包的其他类代码
+public             Y             Y                     Y                     Y
+空白                Y             Y                     N                    N
+private            Y             N                    N                    N
+protected        Y             Y                     Y                    N
+
