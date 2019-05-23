@@ -1,0 +1,43 @@
+//如何让设计一个类（日期类）
+     /*根据属性列出功能
+     1.传年月日，构造日期类
+     2.在当前日期上增加多少天
+     3.在当前日期上减少多少天
+     4.可以返回字符串string的方法      “2019-05-20”
+     5.加一些限制，年支持的范围[1900,2100]
+	 6.如果给定两个日期，希望计算两个日期差多少天*/
+   
+     /*设计属性
+     1.年、月、日
+	 */
+public class Date{
+	private int year;
+	private int month;
+	private int day;
+	//构造方法
+	public Date(int year,int month,int day){
+		//至少做基本的参数检查
+	}
+}
+public void sub(int days){
+	//days必须是正数
+	if(days < 0){
+		System.out.println("days不合法："+days);
+		return;
+	}
+	days-=day;
+	while(days < 1){
+		day += getDayOfMonth(year,month);
+		month--;
+		if(month < 1){
+			month = 12;
+			year --;
+		}
+		day += getDayOfMonth(year,month);
+    }
+}
+public static int differ(Date d1,Date d2){
+	if(!isGreatThan(d1,d2)){
+		System.out.println("必须")
+	}
+}
