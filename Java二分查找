@@ -1,0 +1,31 @@
+public class Wu0525{
+public static int binarySearch(int[] array,int key){
+	int right=array.length;
+	int left=0;
+	while (left < right)
+	//左闭右开区间
+	{
+		int mid = left + (right - left) / 2;
+		//用（left+right）/2会溢出
+		if (array[mid] < key)
+		{
+			left = mid + 1; 
+		}
+		 else if (array[mid]>key)
+		{
+			right = mid;  //right下标不包含在区间内
+		}
+		 else
+		 {
+			 return mid;
+		 }
+	}
+	return -1;
+	}
+
+public static void main(String[] args){
+     int[]array = {1,2,3,4,5,6,7};
+     int binarySearchNum = Wu0525.binarySearch(array,7);
+	 System.out.println("下标是"+binarySearchNum);
+}
+}
