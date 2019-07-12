@@ -1,0 +1,38 @@
+设计一个O(n^2)时间的算法，找出由n个数字组成的序列的最长单调递增子序列。
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int max = 0;
+	int count = 1;
+	int n = 6;
+	int b, c;
+	int a[] = {0, 6, 9, 7, 8, 10, 30};
+	for (int i = 0; i < n; i++){
+		b = a[i];
+		for (int j = i + 1; j < n; j++){
+			if (b < a[j]){
+				b = a[j];
+				count++;
+			}
+			else break;
+		}
+		if (max < count){
+			max = count;
+			c = i;
+		}
+		count = 1;
+	}
+	printf("%d ",a[c]);
+	b = a[c];
+	for (int i = c + 1; i < n; i++){
+		if (b < a[i]){
+			b = a[i];
+			printf("%d ", b);
+		}
+		else break;
+	}
+	system("pause");
+	return 0;
+}
