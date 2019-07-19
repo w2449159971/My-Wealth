@@ -1,0 +1,29 @@
+int main(){
+	int max = 0;
+	int count = 1;
+	int n = 7;
+	int  c;
+	int a[] = {0, 6, 9, 7, 8, 10, 30};
+	for (int i = 0; i < n; i++){
+		for (int j = i + 1; j < n; j++){
+			if (a[i] < a[j]){
+				a[i] = a[j];
+				count++;
+			}
+		}
+		if (max < count){
+			max = count;
+			c = i;
+		}
+		count = 1;
+	}
+	printf("%d ",a[c]);
+	for (int i = c + 1; i < n; i++){
+		if (a[c]< a[i]){
+			a[c] = a[i];
+			printf("%d ", a[c]);
+		}
+	}
+	system("pause");
+	return 0;
+}
