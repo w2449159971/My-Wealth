@@ -1,0 +1,21 @@
+输入一个数组 把奇数放在前面 偶数放在后面
+void adjust(int *a, int left, int right)
+{
+	int temp;
+	while (left<right)
+	{
+		if ( left % 2==0)
+			left++;
+		if (right % 2==1)
+			right--;
+		if (left<right)
+		{
+      temp = a[left];
+			a[left] = a[right];
+			a[right] = temp;
+
+		}
+		left++;
+		right--;
+	}
+}
