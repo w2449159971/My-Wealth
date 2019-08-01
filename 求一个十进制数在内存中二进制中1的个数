@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+int BinarySystem(int k){
+	int count=0;
+	while (k>0){
+		k = k&(k - 1);
+		count++;
+	}
+	printf("%d", count);
+	return count;
+}
+
+int main(){
+	int k;
+	printf("请输入您要判断的数:");
+	scanf("%d", &k);
+	BinarySystem(k);
+	system("pause");
+}
