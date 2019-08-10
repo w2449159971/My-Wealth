@@ -1,0 +1,16 @@
+把hello world 逆置成 dlrow olled
+void reverseStr(char *str)
+{
+    int len;
+    int i;
+    char temp;
+
+    len = strlen(str); // 获取字符串长度
+    
+    for (i = 0; i < len/2; i++)//逆置字符串
+    {
+        temp = str[i];
+		str[i] = str[len-1-i];
+		str[len-1-i] = temp;
+    }
+}
