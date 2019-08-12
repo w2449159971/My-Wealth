@@ -1,0 +1,9 @@
+void twopower(int n){
+	for (int k = 2; k <= n / 2; k += 2){
+		n = n / k + n%k;
+		if (n % 2 == 0){
+			printf("该数为是2的次方数\n");
+			break;
+		}
+	}
+}
