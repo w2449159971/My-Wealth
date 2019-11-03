@@ -1,7 +1,10 @@
  void array( ){
+
 	int i, j,k;
 	int a[4][4];
+	
 	printf("请输入一个递增二维数组");
+
 	for (i = 0; i < 4; i++){
 		for (j = 0; j < 4; j++){
 			scanf("%d", &a[i][j]);
