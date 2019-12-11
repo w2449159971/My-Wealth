@@ -4,8 +4,6 @@
 实现reverse（）函数完成数组元素的逆置。 
 要求：自己设计函数的参数，返回值。 
 
-#define _CRT_SECURE_NO_WARNINGS 1
-
 #include<stdio.h>
 #include<stdlib.h>
 void init(int data[], int size, int input[])
@@ -87,3 +85,5 @@ int main()
 	system(" pause");
 	return 0;
 }
+
+
