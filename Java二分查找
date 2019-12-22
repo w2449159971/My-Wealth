@@ -1,4 +1,5 @@
-public class Wu0525{
+
+public class Wu{
 public static int binarySearch(int[] array,int key){
 	int right=array.length;
 	int left=0;
@@ -27,5 +28,5 @@ public static void main(String[] args){
      int[]array = {1,2,3,4,5,6,7};
      int binarySearchNum = Wu0525.binarySearch(array,7);
 	 System.out.println("下标是"+binarySearchNum);
-}
+       }
 }
