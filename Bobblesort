@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+void Bobblesort(int a[], int k){
+	    int i, j;
+		int tmp = 0;
+		int m = sizeof(a) / sizeof(a[0]);  //s数组大小
+		for (i = 0; i<m - 1; i++)    //比较m-1次
+		{
+			for (j = 0; j < m - i - 1; j++)   // 最后一次比较a[m-i-1]与a[m-i-2]
+			{
+				if (a[j]>a[j + 1])    //如果a[j]比a[j+1]大则交换内容
+				{
+					tmp = a[j + 1];
+					a[j + 1] = a[j];
+					a[j] = tmp;
+				}
+			}
+		}
+		for (i = 0; i < k; i++)
+		{
+			printf(" %d ", a[i]);   //打印
+		}
+		printf(" \n ");
+		return 0;
+	}
+int main(){
+	int a[10] = {1,2,3,2,2,2,5,4,2};
+	int k;
+	printf("请输入您要判断的数:");
+	scanf("%d", &k);
+	Bobblesort(a[10], k);
+	system("pause");
+}
