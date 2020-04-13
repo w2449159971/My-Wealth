@@ -1,5 +1,6 @@
 用count计数，然后用for循环依次比较，找出出现次数为1的元素，当count==1时，则为要找的那个数。
 void Find(int array[], int len)
+
 {
 	int i = 0;
 	int j = 0;
@@ -9,7 +10,6 @@ void Find(int array[], int len)
 		count = 0;//拿出来比较 所以初始化是0
 		for (j = 0; j<len; j++)
 		{
-
 			if (array[i] == array[j])
 				count++;
 		}
